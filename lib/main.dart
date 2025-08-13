@@ -8,7 +8,7 @@ String name = "John";
 int num = 23;
 double num2 = 24;
 List myList = [];
-Map<String, dynamic> myMap = {"String":"hello", "String2":"hello"};
+Map<String, dynamic> myMap = {"String": "hello", "String2": "hello"};
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -34,7 +35,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          brightness: Brightness.dark,
+        ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -94,7 +98,24 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Text("Hello", style: TextStyle(color: Colors.green)),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(26.0),
+            color: Colors.red,
+          ),
+          margin: EdgeInsets.all(50.0),
+          height: double.infinity,
+          width: double.infinity,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(26.0),
+              color: Colors.orange,
+            ),
+            margin: EdgeInsets.all(50.0),
+            height: double.infinity,
+            width: double.infinity,
+          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
