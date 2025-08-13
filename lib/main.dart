@@ -99,20 +99,35 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Container(
-        child: Stack(
-          children: [
-            ListTile(
-              tileColor: Colors.red,
-              title: Text("helloooo"),
-              leading: Icon(Icons.abc),
-              trailing: Text("twe0"),
-              onTap: () {
-                print("clicked ON");
-              },
-            ),
-          ],
-        ),
+      body: Wrap(
+        children: [
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+          Text("hello"),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
