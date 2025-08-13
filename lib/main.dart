@@ -22,13 +22,17 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         // * more like navbaaaar
-        appBar: AppBar(
-          title: Text("Flutter App"),
-          centerTitle: true,
-
-          leading: Icon(Icons.login),
-          actions: [Text("helloooo")],
-          backgroundColor: Colors.teal,
+        appBar: AppBar(title: Text("Flutter App"), centerTitle: true),
+        // * bottom navbaaaaaaar
+        bottomNavigationBar: NavigationBar(
+          destinations: [
+            NavigationDestination(icon: Icon(Icons.person), label: "Person"),
+            NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+          ],
+          onDestinationSelected: (int value) {
+            print(value);
+          },
+          selectedIndex: 1,
         ),
       ),
     );
