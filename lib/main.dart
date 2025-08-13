@@ -100,7 +100,6 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.all(50.0),
         child: Stack(
           children: [
             ListTile(
@@ -108,7 +107,9 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text("helloooo"),
               leading: Icon(Icons.abc),
               trailing: Text("twe0"),
-              onTap: () {},
+              onTap: () {
+                print("clicked ON");
+              },
             ),
           ],
         ),
