@@ -95,36 +95,10 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Container(
-          color: Colors.black,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(26.0),
-                  color: Colors.red,
-                ),
-                width: 100.0,
-                height: 100.0,
-                child: Center(child: Text("helloooo")),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(26.0),
-                  color: Colors.red,
-                ),
-                width: 100.0,
-                height: 100.0,
-              ),
-            ],
-          ),
-        ),
+      body: Image.network(
+        "https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        height: double.infinity,
+        fit: BoxFit.cover,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
