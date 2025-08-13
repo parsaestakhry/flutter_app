@@ -20,7 +20,17 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(),
+      home: Scaffold(
+        // * more like navbaaaar
+        appBar: AppBar(
+          title: Text("Flutter App"),
+          centerTitle: true,
+
+          leading: Icon(Icons.login),
+          actions: [Text("helloooo")],
+          backgroundColor: Colors.teal,
+        ),
+      ),
     );
   }
 }
