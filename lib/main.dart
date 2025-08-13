@@ -100,9 +100,10 @@ class _MyHomePageState extends State<MyHomePage> {
         // in the middle of the parent.
         child: Container(
           color: Colors.black,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            mainAxisSize: MainAxisSize.min,
+          height: double.infinity,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 decoration: BoxDecoration(
