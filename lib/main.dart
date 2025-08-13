@@ -100,8 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
         // in the middle of the parent.
         child: Container(
           color: Colors.black,
-          height: double.infinity,
           child: Row(
+            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -112,6 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 width: 100.0,
                 height: 100.0,
+                child: Center(child: Text("helloooo")),
               ),
               Container(
                 decoration: BoxDecoration(
