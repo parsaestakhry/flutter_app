@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/navbar_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,18 +26,7 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(title: Center(child: Text("Flutter App"))),
-        bottomNavigationBar: NavigationBar(
-          destinations: [
-            NavigationDestination(icon: Icon(Icons.person), label: "Person"),
-            NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-          ],
-          onDestinationSelected: (int value) {
-            setState(() {
-              selectedValue = value;
-            });
-          },
-          selectedIndex: selectedValue,
-        ),
+        bottomNavigationBar: NavbarWidget(),
       ),
     );
   }
