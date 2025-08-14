@@ -28,35 +28,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         // * more like navbaaaar
         appBar: AppBar(title: Text("Flutter App"), centerTitle: true),
-        drawer: Drawer(
-          child: Column(
-            children: [
-              DrawerHeader(child: Text("drawer")),
-              ListTile(title: Text("Logout")),
-            ],
-          ),
-        ),
-        // * float buttons
-        floatingActionButton: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            FloatingActionButton(
-              onPressed: () {
-                print("button clicked");
-              },
-              // * icon for the button
-              child: Icon(Icons.add),
-            ),
-            //* space between the buttons
-            SizedBox(height: 10.0),
-            FloatingActionButton(
-              onPressed: () {
-                print("button clicked");
-              },
-              child: Icon(Icons.add),
-            ),
-          ],
-        ),
+
         // * bottom navbaaaaaaar
         bottomNavigationBar: NavigationBar(
           // * where should the icons be
