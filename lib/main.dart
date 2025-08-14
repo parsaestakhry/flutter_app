@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
 }
+
+
+String? title = "flutter";
 // material
 
 //scaffold: skeleton of the app
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
       //* skeleton of the application
       home: Scaffold(
         // * more like navbaaaar
-        appBar: AppBar(title: Text("Flutter App"), centerTitle: true),
+        appBar: AppBar(title: Text(title!), centerTitle: true),
 
         // * bottom navbaaaaaaar
         bottomNavigationBar: NavigationBar(
@@ -36,10 +39,6 @@ class MyApp extends StatelessWidget {
             NavigationDestination(icon: Icon(Icons.person), label: "Person"),
             NavigationDestination(icon: Icon(Icons.home), label: "Home"),
           ],
-          // * onclick function
-          onDestinationSelected: (int value) {
-            print(value);
-          },
           // * default selected
           selectedIndex: 1,
         ),
