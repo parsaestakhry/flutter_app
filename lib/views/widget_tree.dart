@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/data/notifires.dart';
 import 'package:flutter_app/views/pages/home_page.dart';
 import 'package:flutter_app/views/pages/profile_page.dart';
 import 'package:flutter_app/widgets/navbar_widget.dart';
@@ -12,7 +13,12 @@ class WidgetTree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Center(child: Text("Flutter App"))),
-      body: pages.elementAt(1),
+      body: ValueListenableBuilder(
+        valueListenable: selectedPageNotifier,
+        builder: (context, selectedPage, child) {
+          return pages.elementAt(selectedPage);
+        },
+      ),
       bottomNavigationBar: NavbarWidget(),
     );
   }

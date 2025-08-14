@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/data/notifires.dart';
 
-class NavbarWidget extends StatefulWidget {
+class NavbarWidget extends StatelessWidget {
   const NavbarWidget({super.key});
 
   @override
-  State<NavbarWidget> createState() => _NavbarWidgetState();
-}
-
-class _NavbarWidgetState extends State<NavbarWidget> {
-  int selectedValue = 0;
-  @override
   Widget build(BuildContext context) {
-    return NavigationBar(
-      destinations: [
-        NavigationDestination(icon: Icon(Icons.person), label: "Person"),
-        NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-      ],
-      onDestinationSelected: (int value) {
-        setState(() {
-          selectedValue = value;
-        });
+    return ValueListenableBuilder(
+      valueListenable: selectedPageNotifier,
+      builder: (context, selectedPage, child) {
+        return NavigationBar(
+          destinations: [
+            NavigationDestination(icon: Icon(Icons.person), label: "Person"),
+            NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+          ],
+          onDestinationSelected: (int value) {
+            selectedPageNotifier.value = value;
+          },
+          selectedIndex: selectedPage,
+        );
       },
-      selectedIndex: selectedValue,
     );
   }
 }
