@@ -69,12 +69,18 @@ class _ProfilePageState extends State<ProfilePage> {
                 });
               },
             ),
-            GestureDetector(
+            InkWell(
+              splashColor: Colors.teal,
               onTap: () {
                 print("hello");
               },
-              child: Image.network(
-                "https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+              child: Container(
+                height: 200,
+                width: double.infinity,
+                color: Colors.white38,
+                child: Image.network(
+                  "https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                ),
               ),
             ),
           ],
