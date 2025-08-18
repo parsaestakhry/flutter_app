@@ -75,12 +75,48 @@ class _ProfilePageState extends State<ProfilePage> {
                 print("hello");
               },
               child: Container(
-                height: 200,
+                height: 50,
                 width: double.infinity,
                 color: Colors.white38,
-                child: Image.network(
-                  "https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Click me'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+              ),
+            ),
+            SizedBox(height: 20),
+            FilledButton(
+              onPressed: () {},
+              child: Text('Click me'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+              ),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text('Click me'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+              ),
+            ),
+            CloseButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+              ),
+            ),
+            BackButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
               ),
             ),
           ],
