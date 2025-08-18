@@ -19,9 +19,7 @@ class _ProfilePageState extends State<ProfilePage> {
           TextField(
             controller: controller,
             decoration: InputDecoration(border: OutlineInputBorder()),
-            onEditingComplete: () {
-              setState(() {});
-            },
+            onEditingComplete: () => setState(() {}),
           ),
           Text(controller.text),
           Checkbox(
