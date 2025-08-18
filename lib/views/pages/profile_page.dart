@@ -48,7 +48,7 @@ class _ProfilePageState extends State<ProfilePage> {
               });
             },
           ),
-          SwitchListTile(
+          SwitchListTile.adaptive(
             title: Text("Switch me ?!"),
             value: isSwitched,
             onChanged: (bool value) {
