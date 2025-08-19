@@ -109,6 +109,28 @@ class _SettingsPageState extends State<SettingsPage> {
                 },
                 child: Text('Open snack bar'),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        content: Text("alert content"),
+                        title: Text("Alert title"),
+                        actions: [
+                          FilledButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text("Close"),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                child: Text('Open dialog'),
+              ),
             ],
           ),
         ),
