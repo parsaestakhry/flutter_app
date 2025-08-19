@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/views/widget_tree.dart';
 import 'package:flutter_app/widgets/hero_widget.dart';
 
-class WelcomePage extends StatelessWidget {
+class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
 
+  @override
+  State<WelcomePage> createState() => _WelcomePageState();
+}
+
+class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,16 +18,15 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // * rounded borders for every widget
             HeroWidget(),
             SizedBox(height: 12),
             FilledButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return WidgetTree();
+                      return const WidgetTree();
                     },
                   ),
                 );
