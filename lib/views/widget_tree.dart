@@ -24,6 +24,7 @@ class WidgetTree extends StatelessWidget {
                 },
                 icon: Icon(Icons.light_mode),
               ),
+              IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
             ],
           ),
           body: ValueListenableBuilder(
